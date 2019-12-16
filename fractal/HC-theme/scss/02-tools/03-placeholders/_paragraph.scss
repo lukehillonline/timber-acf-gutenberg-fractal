@@ -1,0 +1,29 @@
+%p--lead {
+    font-size: rem(22);
+    line-height: calc(28 / 22);
+    @include font-body('regular');
+}
+
+%p--body {
+    color: $color-primary;
+    font-size: rem(16);
+    line-height: calc(22 / 16);
+    @include font-body('regular');
+
+    @include breakpoint(large) {
+        font-size: rem(18);
+        line-height: calc(24 / 18);
+    }
+}
+
+%p--small {
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    @include font-body('regular');
+}
+
+%p--x-small {
+    font-size: rem(12);
+    line-height: calc(16 / 12);
+    @include font-body('regular');
+}

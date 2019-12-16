@@ -1,0 +1,15 @@
+.Code {
+    background-color: $color-tertiary;
+    border: 1px solid $color-secondary;
+    border-top: 0;
+    overflow-x: scroll;
+}
+
+pre {
+    margin: 0;
+
+    code {
+        border-radius: 10px;
+        padding: 20px;
+    }
+}

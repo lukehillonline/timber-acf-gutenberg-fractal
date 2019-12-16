@@ -1,0 +1,96 @@
+.checkbox {
+    margin: 0 rem(12) 0 0;
+    width: rem(38);
+
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused {
+        & + .checkbox-overlay {
+            border-color: $color-primary;
+        }
+
+        &:checked {
+            & + .checkbox-overlay {
+                border-color: $color-primary;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &:checked {
+        & + .checkbox-overlay {
+            border-color: $color-primary;
+            color: $color-primary;
+
+            .icon {
+                display: block;
+            }
+        }
+    }
+
+    &.success {
+        & + .checkbox-overlay {
+            border-color: $color-primary;
+        }
+
+        &:checked {
+            & + .checkbox-overlay {
+                border-color: $color-primary;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &--disabled {
+        & + .checkbox-overlay {
+            background-color: $color-secondary;
+            border-color: $color-secondary;
+        }
+
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused {
+            & + .checkbox-overlay {
+                border-color: $color-secondary;
+            }
+
+            &:checked {
+                & + .checkbox-overlay {
+                    border-color: $color-secondary;
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        &:checked {
+            & + .checkbox-overlay {
+                border-color: $color-secondary;
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+.checkbox-overlay {
+    background-color: $color-tertiary;
+    border: rem(2) solid $color-secondary;
+    border-radius: rem(6);
+    display: block;
+    height: rem(38);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: rem(38);
+
+    .icon {
+        display: none;
+        height: rem(21);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(21);
+    }
+}

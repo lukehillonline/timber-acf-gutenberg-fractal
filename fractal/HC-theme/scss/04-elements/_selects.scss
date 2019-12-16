@@ -1,0 +1,76 @@
+.select-wrapper {
+    position: relative;
+
+    .icon {
+        color: $color-primary;
+        height: rem(16);
+        position: absolute;
+        right: rem(18);
+        top: rem(19);
+        transform: rotate(180deg);
+        width: rem(16);
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+
+        .icon {
+            color: $color-secondary;
+        }
+    }
+}
+
+.select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $color-tertiary;
+    border: rem(2) solid $color-secondary;
+    border-radius: rem(6);
+    color: $color-secondary;
+    padding: rem(13) rem(45) rem(13) rem(15);
+    width: 100%;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        background-color: $color-tertiary;
+        background-image: none;
+    }
+
+    &:hover,
+    &.is-hovered {
+        color: $color-primary;
+    }
+
+    &:focus,
+    &.is-focused {
+        border-color: $color-primary;
+        color: $color-primary;
+        outline: 0;
+    }
+
+    &.error {
+        border-color: $color-error;
+    }
+
+    &.success {
+        border-color: $color-primary;
+    }
+
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: $color-secondary;
+        cursor: not-allowed;
+    }
+
+    // CAUTION: IE hackery
+    &::-ms-expand {
+        // remove default arrow in IE 10 and 11
+        display: none;
+    }
+}

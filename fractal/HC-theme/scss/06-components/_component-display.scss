@@ -1,0 +1,10 @@
+// place classes to help show components best here
+.pl__bg-dark {
+    background-color: map-get($colors, 'bg-dark');
+    padding: rem(30);
+}
+
+.pl__bg-light {
+    background-color: map-get($colors, 'white');
+    padding: rem(30);
+}

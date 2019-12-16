@@ -1,0 +1,25 @@
+.spacer-none {
+    margin-bottom: 0;
+}
+
+.spacer-s {
+    margin-bottom: $spacer-s;
+}
+
+.spacer-m {
+    margin-bottom: $spacer-m;
+}
+
+.spacer-l {
+    margin-bottom: $spacer-l;
+}
+
+.spacer-xl {
+    margin-bottom: $spacer-xl;
+}
+
+.medium-spacer-none {
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
+}

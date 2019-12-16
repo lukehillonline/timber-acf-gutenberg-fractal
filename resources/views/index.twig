@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	<div class="grid">
+		<div class="ambassador-list-container">
+		{% for post in posts %}
+			{# {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %} #}
+			{% include ['ui-components/story-thumbnail/story-thumbnail.twig'] %}
+		{% endfor %}
+		</div>
+	</div>
+	
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

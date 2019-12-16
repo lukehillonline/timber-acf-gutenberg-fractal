@@ -1,0 +1,18 @@
+.icon--l {
+    font-size: rem(40);
+}
+
+.pl__pictograms,
+.pl__icons {
+    svg {
+        float: left;
+        height: 50px;
+        width: 50px;
+    }
+
+    span {
+        float: left;
+        line-height: 50px;
+        margin-left: 15px;
+    }
+}

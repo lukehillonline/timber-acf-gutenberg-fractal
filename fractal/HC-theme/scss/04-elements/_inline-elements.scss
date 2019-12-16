@@ -1,0 +1,57 @@
+address,
+cite,
+em,
+img,
+q,
+strong,
+sub,
+sup {
+    @extend .elementreset;
+}
+
+address {
+    font-weight: normal;
+}
+
+cite {
+    font-size: rem(14);
+    font-style: italic;
+    font-weight: 400;
+    line-height: calc(18 / 14);
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    font-weight: normal;
+}
+
+q {
+    font-style: italic;
+
+    &::before {
+        content: open-quote ' ';
+    }
+
+    &::after {
+        content: ' ' close-quote;
+    }
+}
+
+strong {
+    @include font-body('bold');
+}
+
+sub {
+    font-size: rem(12);
+    line-height: rem(16);
+    vertical-align: sub;
+}
+
+sup {
+    font-size: rem(12);
+    line-height: rem(16);
+    vertical-align: super;
+}

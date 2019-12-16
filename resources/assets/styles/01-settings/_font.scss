@@ -1,0 +1,19 @@
+/// Base font size - spacing and widths defined in REM.
+/// Use this as base, all REM units are this divided by 10 - eg 1.2rem = 12px.
+///
+/// @group units
+/// @type unit
+$font-size: 16px;
+
+/// Base line height
+/// @group units
+/// @type unit
+$line-height-body: 1.33;
+
+/// Heading line height
+/// @group units
+/// @type unit
+$line-height-heading: 1;
+
+$heading-font: 'SST W01 Medium', 'Helvetica Neue', Helvetica, sans-serif;
+$body-font: 'SST W01 Roman', 'Helvetica Neue', Helvetica, sans-serif;

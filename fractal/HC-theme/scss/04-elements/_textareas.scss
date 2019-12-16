@@ -1,0 +1,70 @@
+.textarea {
+    @include font-body('regular');
+
+    background-color: $color-tertiary;
+    border: rem(2) solid $color-secondary;
+    border-radius: rem(6);
+    display: block;
+    font-size: rem(18);
+    line-height: rem(24);
+    min-height: rem(144);
+    padding: rem(13) rem(45) rem(13) rem(15);
+    width: 100%;
+
+    &::-ms-clear {
+        display: none;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+    }
+
+    &::placeholder {
+        color: $color-secondary;
+    }
+
+    &:hover,
+    &.is-hovered {
+        &::placeholder {
+            color: $color-primary;
+        }
+    }
+
+    &:focus,
+    &.is-focused {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 rem(2) $color-primary !important;
+
+        &::placeholder {
+            color: $color-primary;
+        }
+    }
+
+    &.error {
+        border-color: $color-error;
+    }
+
+    &.success {
+        background-image: url('/images/components/form-elements/success.svg');
+        background-position: right rem(14) top rem(14);
+        background-repeat: no-repeat;
+        background-size: rem(24);
+        border-color: $color-primary;
+    }
+
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: $color-secondary;
+        cursor: not-allowed;
+
+        &::placeholder {
+            color: $color-secondary;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "preview": "@preview",
+    "title": "Story Thumbnail",
+    "context": {
+        "post": {
+            "title": "Albert Dros",
+            "thumbnail": {
+                "src": "https://via.placeholder.com/600",
+                "alt": "Thomas"
+            },
+            "link": "/"
+        }
+    }
+}

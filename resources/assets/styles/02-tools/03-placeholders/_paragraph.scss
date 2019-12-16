@@ -1,0 +1,26 @@
+%p--lead {
+    font-size: rem(22);
+    line-height: calc(28 / 22);
+    @include font-body('regular');
+}
+
+%p--body {
+    background-color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.65;
+    margin: 0;
+    @include font-body('regular');
+}
+
+%p--small {
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    @include font-body('regular');
+}
+
+%p--x-small {
+    font-size: rem(12);
+    line-height: calc(16 / 12);
+    @include font-body('regular');
+}

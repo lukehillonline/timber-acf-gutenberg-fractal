@@ -1,0 +1,21 @@
+%links {
+    @include font-body('bold');
+
+    color: $color-link;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+
+    &.is-visited,
+    &:visited {
+        color: $color-link;
+    }
+
+    &.is-hover,
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-link;
+    }
+}

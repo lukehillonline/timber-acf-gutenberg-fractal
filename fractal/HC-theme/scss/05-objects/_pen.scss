@@ -1,0 +1,115 @@
+.Pen {
+    height: auto;
+    max-width: rem(1140);
+
+    &-panel {
+        padding: rem(15) rem(15);
+    }
+
+    &-header {
+        margin-top: rem(40);
+        max-height: none;
+    }
+
+    &-title {
+        @include font-heading('book');
+
+        color: $color-primary;
+        font-size: rem(28);
+        overflow: auto;
+        text-overflow: unset;
+        white-space: unset;
+    }
+
+    &-description {
+        margin-bottom: rem(25);
+
+        h1 {
+            color: $color-primary;
+            margin: 0 0 rem(72) 0;
+        }
+
+        h2 {
+            color: $color-primary;
+            margin: 0 0 rem(48) 0;
+        }
+
+        h3 {
+            color: $color-primary;
+            margin: 0 0 rem(36) 0;
+        }
+
+        h4 {
+            color: $color-primary;
+            margin: rem(36) 0 rem(12) 0;
+        }
+
+        h5 {
+            color: $color-primary;
+            margin: 0 0 rem(2) 0;
+        }
+
+        h6 {
+            color: $color-primary;
+            margin: 0 0 rem(6) 0;
+        }
+
+        em {
+            color: $color-secondary;
+        }
+
+        p {
+            margin: 0 0 rem(18) 0;
+        }
+    }
+
+    &-previewLink {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+
+        svg {
+            fill: $color-secondary;
+            height: rem(34);
+            opacity: 1;
+            padding: rem(6);
+            width: rem(34);
+        }
+    }
+
+    &-handle {
+        display: none !important; // use only when the panel should be hidden underneath
+    }
+
+    &-preview {
+        background-color: $color-tertiary;
+        border: 0;
+        height: auto !important; // use only when the panel should be hidden underneath
+        margin: 0;
+        max-height: none;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    @media only screen and (min-width: rem(768)) {
+        &-panel {
+            padding: rem(25) rem(85);
+        }
+
+        &-header {
+            margin-top: rem(30);
+        }
+
+        &-title {
+            font-size: rem(40);
+        }
+
+        &-preview {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.Preview {
+    &-wrapper,
+    &-iframe,
+    &-resizer {
+        background-color: transparent;
+        bottom: auto;
+        height: auto;
+        left: auto;
+        max-width: none;
+        min-width: rem(200);
+        offset-inline-start: 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+    }
+
+    &-wrapper {
+        border: 1px solid $color-secondary;
+        overflow: hidden;
+    }
+
+    &-iframe {
+        float: left;
+    }
+
+    &-position {
+        background-color: $color-light-grey;
+        padding: rem(24);
+        text-align: center;
+
+        &--dark {
+            background-color: $color-secondary;
+        }
+    }
+
+    @include breakpoint(medium) {
+        &-position {
+            padding: rem(36);
+        }
+    }
+}

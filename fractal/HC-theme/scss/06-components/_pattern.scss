@@ -1,0 +1,39 @@
+.pl__pattern {
+    color: map-get($colors, 'primary');
+    padding-bottom: 2em;
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .pl__pattern-title {
+        a {
+            color: map-get($colors, 'primary') !important; // placed inside sg-pattern to override default styling
+        }
+    }
+}
+
+.pl__pattern-head {
+    padding: 30px !important;
+}
+
+.pl__pattern-category {
+    font-size: 32px;
+    text-align: center;
+
+    &:first-of-type {
+        margin-top: 0 !important;
+        padding-top: 2rem;
+    }
+
+    .pl__pattern-category-title {
+        a {
+            color: map-get($colors, 'primary') !important;
+            text-decoration: underline !important;
+        }
+    }
+}
+
+.pl__pattern-example {
+    position: relative; // show absolutely positioned elements
+}

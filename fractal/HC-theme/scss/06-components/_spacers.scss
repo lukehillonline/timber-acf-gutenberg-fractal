@@ -1,0 +1,15 @@
+.pl__spacer {
+    background-color: map-get($colors, 'bg-light');
+
+    &--s {
+        margin-bottom: $spacer-s;
+    }
+
+    &--m {
+        margin-bottom: $spacer-m;
+    }
+
+    &--l {
+        margin-bottom: $spacer-l;
+    }
+}

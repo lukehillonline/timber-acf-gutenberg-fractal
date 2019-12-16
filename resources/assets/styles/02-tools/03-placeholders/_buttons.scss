@@ -1,0 +1,9 @@
+%button {
+    @include font-heading('medium');
+    border: solid 2px transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem(16);
+    padding: rem(8) rem(16);
+    text-decoration: none;
+}

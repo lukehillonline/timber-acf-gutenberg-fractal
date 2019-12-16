@@ -1,0 +1,9 @@
+{
+    "preview": "@preview",
+    "title": "Boost Paragraph",
+    "context": {
+        "fields": {
+            "boost_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at lobortis nisl. In consequat nec augue non venenatis. Cras consectetur ligula eu pretium dignissim. Aenean ornare mi at magna viverra interdum. Nam magna ex, sollicitudin fermentum dolor et, porttitor sollicitudin ex. In tincidunt tellus sit amet tincidunt commodo. Nam sed facilisis neque. Cras dignissim erat velit, ac eleifend mauris tempor et. Etiam non turpis lectus. Nam eros dolor, volutpat laoreet arcu in, vulputate mattis eros. Nulla mauris purus, aliquam eu pretium sit amet, egestas quis ex. In tempor orci feugiat urna ultrices finibus. Suspendisse imperdiet, velit sit amet accumsan tincidunt."
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.ambassador-list {
+    &-container {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 1150px;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    &-row {
+        margin: 0 -20px;
+
+        &::after {
+            clear: both;
+            content: '';
+            display: block;
+            height: 0;
+            width: 100%;
+        }
+
+        .ambassador-list-col {
+            box-sizing: border-box;
+            float: left;
+            margin: 20px 0;
+            padding: 0 20px;
+            width: 25%;
+
+            @media (max-width: 900px) {
+                width: 50%;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-thumbnail {
+        cursor: pointer;
+        position: relative;
+
+        &-img {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        &-caption {
+            background-color: #eee;
+            padding: 15px;
+
+            &::after {
+                clear: both;
+                content: '';
+                display: block;
+            }
+
+            .owner-img {
+                float: left;
+                margin: 0 15px 0 0;
+            }
+
+            h3,
+            p {
+                font-family: 'SST W01 Roman', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 19px;
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            h3 {
+                font-weight: 600;
+                margin-top: 12px;
+            }
+
+            p {
+                font-weight: 300;
+            }
+        }
+
+        &-url {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            &:hover,
+            &:focus,
+            &:active {
+                border: 0;
+                text-decoration: none;
+            }
+        }
+    }
+}

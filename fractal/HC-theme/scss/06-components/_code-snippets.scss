@@ -1,0 +1,88 @@
+.code-snippets {
+    padding: rem(8) rem(15) rem(48);
+
+    &__nav {
+        background-color: $color-light-grey;
+        border: 1px solid $color-secondary;
+        overflow: hidden;
+
+        ul {
+            margin: 0;
+            padding-left: 0;
+        }
+
+        &-item {
+            display: block;
+            float: left;
+            line-height: 1;
+            margin-bottom: 0;
+
+            &::before {
+                content: '';
+                display: none;
+            }
+        }
+
+        &-link {
+            @extend %links;
+            border: 0;
+            border-right: 1px solid $color-secondary;
+            color: $color-primary;
+            font-weight: 400;
+            padding: rem(21) rem(25);
+            position: relative;
+
+            &:visited,
+            &:hover,
+            &:focus,
+            &.active-panel {
+                border: 0;
+                border-right: 1px solid $color-secondary;
+                color: $color-primary;
+            }
+
+            &:hover {
+                background-color: $color-tertiary;
+            }
+
+            &.active-panel {
+                background-color: $color-tertiary;
+
+                &::after {
+                    background-color: $color-tertiary;
+                    content: '';
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 100%;
+                }
+            }
+        }
+    }
+
+    &__code-snippet {
+        display: none;
+
+        &.active-panel {
+            display: block;
+        }
+    }
+
+    .codepen-button {
+        cursor: pointer;
+        float: right;
+        height: rem(57);
+        padding: rem(5) rem(5) rem(5) rem(0);
+        width: rem(52);
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding: rem(8) rem(85) rem(48);
+    }
+}

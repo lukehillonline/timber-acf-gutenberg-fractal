@@ -1,0 +1,23 @@
+{
+    "preview": "@preview",
+    "title": "Triple Image",
+    "context": {
+        "block": {
+            "id": 1
+        },
+        "fields": {
+            "image_1": {
+                "url": "/images/components/ui-components/article-blocks/triple-image/image_1.jpeg",
+                "alt": "Text Alt 1"
+            },
+            "image_2": {
+                "url": "/images/components/ui-components/article-blocks/triple-image/image_2.jpeg",
+                "alt": "Text Alt 2"
+            },
+            "image_3": {
+                "url": "/images/components/ui-components/article-blocks/triple-image/image_3.jpeg",
+                "alt": "Text Alt 3"
+            }
+        }
+    }
+}

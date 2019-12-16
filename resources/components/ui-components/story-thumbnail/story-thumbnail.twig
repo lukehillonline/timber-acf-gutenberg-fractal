@@ -1,0 +1,13 @@
+<div class="st-item au-filterable span4 content-4" data-type="_story" data-themes="_photographer-stories" data-genres="_reportage" data-bodies="_a9" data-lenses="_fe-24-70mm-28 _fe-70-300mm-45-56" style="display: block;">
+    <article>
+        <a href="{{ post.link }}" class="primary-link parent-level-link no-text canvas-sc-link-selector" target="_self">
+            {% if post.thumbnail.src %}
+                <img alt="{{ post.thumbnail.alt }}" class="st-image canvas-sc-image-selector iq-img" src="{{ post.thumbnail.src }}" >
+            {% endif %}
+            <div class="st-item-content all-white-text align-left-top content-4" style="text-align: left;">
+                <span class="l3 eyebrow canvas-sc-text-selector" data-index="20" data-id="0224da75cb85" data-label="Story 3 - Type (Can be localized and will be displayed on listing.)">STORY</span>
+                <h1 class="headline t4">{{ post.title }}</h1>
+            </div>
+        </a>
+    </article>
+</div>

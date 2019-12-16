@@ -1,0 +1,21 @@
+/// Colour variables used in the original build
+/// @group colors
+/// @type color
+// Colours are named by colour value and then mapped to purpose value.
+
+$colors: (
+    'primary': #000,
+    'secondary': #919191,
+    'tertiary': #ffffff,
+    'success': #00b81a,
+    'error': #b80000
+);
+
+$color-primary: map-get($colors, 'primary');
+$color-secondary: map-get($colors, 'secondary');
+$color-tertiary: map-get($colors, 'tertiary');
+$color-success: map-get($colors, 'success');
+$color-error: map-get($colors, 'error');
+
+$color-link: $color-secondary;
+$color-link-bg: darken($color-link, 10%);

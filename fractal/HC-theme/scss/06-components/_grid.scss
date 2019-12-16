@@ -1,0 +1,87 @@
+$grid-colors: (
+    gutter: $color-primary,
+    cell: $color-primary,
+    highlight: $color-primary,
+    text: $color-primary,
+    text-highlight: $color-primary,
+    bg-red: $color-primary
+);
+
+.pl__example-grid-key {
+    > div {
+        line-height: 2;
+        vertical-align: middle;
+    }
+}
+
+.pl__example-grid-key__swatch {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.pl__example-grid-key__content {
+    background: map-get($grid-colors, 'cell');
+}
+
+.pl__example-grid-key__content-even {
+    background: map-get($grid-colors, 'highlight');
+}
+
+.pl__example-grid-key__gutter {
+    background: map-get($grid-colors, 'gutter');
+}
+
+.pl__example-grid {
+    .grid-x,
+    .grid-y {
+        background: map-get($grid-colors, 'gutter');
+        font-size: 12px;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-y {
+        .grid-x {
+            margin-bottom: 0;
+        }
+    }
+
+    .cell {
+        &:nth-child(odd) {
+            background: map-get($grid-colors, 'cell');
+            color: map-get($grid-colors, 'text');
+        }
+
+        &:nth-child(even) {
+            background: map-get($grid-colors, 'highlight');
+            color: map-get($grid-colors, 'text-highlight');
+        }
+    }
+}
+
+.pl__example-grid--overlay {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0.4;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50000;
+
+    .grid-x {
+        height: 100%;
+    }
+
+    .cell {
+        background: map-get($colors, 'bg-dark') !important;
+
+        &:nth-child(2n) {
+            opacity: 0.5;
+        }
+    }
+}

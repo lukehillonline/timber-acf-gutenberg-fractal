@@ -1,0 +1,14 @@
+
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+em,
+img,
+strong,
+sub,
+sup {
+    @extend .elementreset;
+}

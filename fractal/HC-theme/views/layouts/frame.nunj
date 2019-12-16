@@ -1,0 +1,28 @@
+{% extends "layouts/skeleton.nunj" %}
+{% import "macros/navigation.nunj" as nav %}
+
+{% block page %}
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            {% block content %}{% endblock %}
+            </div>
+
+            {# Adding the header button into the navigation pane so we can give the button a new position #}
+            <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+                {% include 'icons/close-nav.svg' %}
+                {% include 'icons/open-nav.svg' %}
+            </button>
+        </div>
+
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            {% include 'partials/navigation/navigation.nunj' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

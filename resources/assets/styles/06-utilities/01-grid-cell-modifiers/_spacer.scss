@@ -1,0 +1,27 @@
+.row-full {
+    margin-bottom: $spacer-l;
+}
+
+.cms-cell {
+    &.is-empty {
+        @include breakpoint(small only) {
+            display: none;
+        }
+    }
+}
+
+[data-spacer='none'] {
+    margin-bottom: 0;
+}
+
+[data-spacer='medium'] {
+    margin-bottom: $spacer-m;
+}
+
+[data-spacer='small'] {
+    margin-bottom: $spacer-s;
+}
+
+[data-spacer='large'] {
+    margin-bottom: $spacer-l;
+}

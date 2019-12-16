@@ -1,0 +1,78 @@
+h1,h2,h3,h4,h5,h6{
+  border:0;
+  font:inherit;
+  font-size:100%;
+  margin:0;
+  padding:0;
+  -webkit-text-size-adjust:none;
+  vertical-align:baseline;
+}
+
+.heading00,h1{
+  font-size:3em;
+  line-height:1.125;
+  margin-bottom:18px;
+}
+
+
+.heading00,.heading01,h1,h2{
+  font-family:SST W01 Medium,Helvetica Neue,Helvetica,sans-serif;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+
+
+.heading01,h2{
+  font-size:2.375em;
+  line-height:1.15789;
+  margin-bottom:24px;
+}
+
+
+.heading02,h3{
+  font-size:1.875em;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+
+.heading02,.heading03,h3,h4{
+  font-family:SST W01 Medium,Helvetica Neue,Helvetica,sans-serif;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+
+
+.heading03,h4{
+  font-size:1.625em;
+  line-height:1.30769;
+  margin-bottom:16px;
+}
+
+
+.heading04,h5{
+  font-size:1.375em;
+  line-height:1.18182;
+  margin-bottom:14px;
+}
+
+
+.heading04,.heading05,h5,h6{
+  font-family:SST W01 Medium,Helvetica Neue,Helvetica,sans-serif;
+  font-weight:400;
+}
+
+
+.heading05,h6{
+  font-size:1.125em;
+  line-height:1.44444;
+  margin-bottom:8px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color:inherit;
+  line-height:1;
+}
+
+
+/*# sourceMappingURL=headings.css.map*/

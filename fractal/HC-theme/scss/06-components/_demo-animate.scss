@@ -1,0 +1,13 @@
+.demo-animate {
+    background: map-get($colors, 'bg-dark');
+    border-radius: 8px;
+    color: map-get($colors, 'primary-light');
+    cursor: pointer;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+
+    &:hover {
+        opacity: 0.4;
+    }
+}

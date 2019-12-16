@@ -1,0 +1,11 @@
+/// Convert number to pixel unit
+/// @group utils
+/// @param {Number} Pixel size
+@function px($number) {
+    @return #{$number}px;
+}
+
+@function rem($size) {
+    $rem-size: $size / 16;
+    @return #{$rem-size}rem;
+}

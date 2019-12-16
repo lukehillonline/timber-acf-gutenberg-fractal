@@ -1,0 +1,51 @@
+%heading00 {
+    @include font-heading('book');
+
+    font-size: 3em;
+    letter-spacing: -0.04em;
+    line-height: 1.125;
+    margin-bottom: 18px;
+}
+
+%heading01 {
+    @include font-heading('book');
+
+    font-size: 2.375em;
+    letter-spacing: -0.04em;
+    line-height: 1.15789;
+    margin-bottom: 24px;
+}
+
+%heading02 {
+    @include font-heading('book');
+
+    font-size: 1.875em;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+%heading03 {
+    @include font-heading('book');
+
+    font-size: 1.625em;
+    letter-spacing: -0.04em;
+    line-height: 1.30769;
+    margin-bottom: 16px;
+}
+
+%heading04 {
+    @include font-heading('book');
+
+    font-size: 1.375em;
+    line-height: 1.18182;
+    margin-bottom: 14px;
+}
+
+%heading05 {
+    @include font-heading('medium');
+
+    font-size: 1.125em;
+    line-height: 1.44444;
+    margin-bottom: 8px;
+}

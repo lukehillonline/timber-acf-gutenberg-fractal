@@ -1,0 +1,55 @@
+.label {
+    @include font-heading('book');
+
+    font-size: rem(20);
+    letter-spacing: rem(-0.2);
+    line-height: rem(24);
+
+    &--inline {
+        @include font-body('regular');
+
+        cursor: pointer;
+        display: block;
+        font-size: rem(18);
+        letter-spacing: rem(0);
+        line-height: rem(38);
+        position: relative;
+    }
+
+    &--above {
+        display: block;
+        margin-bottom: rem(6);
+    }
+
+    &--disabled {
+        color: $color-secondary;
+        cursor: not-allowed;
+    }
+}
+
+.label-indicator {
+    font-size: rem(14);
+    line-height: rem(18);
+    margin-left: rem(10);
+
+    &--error {
+        border-left: rem(2) solid $color-error;
+        color: $color-error;
+        display: block;
+        font-weight: 600;
+        margin-left: rem(7);
+        margin-top: rem(12);
+        padding-left: rem(6);
+    }
+
+    &--help {
+        color: $color-secondary;
+        display: block;
+        margin-left: rem(15);
+        margin-top: rem(12);
+
+        .label & {
+            margin-top: rem(12);
+        }
+    }
+}

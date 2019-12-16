@@ -1,0 +1,153 @@
+{% import "macros/render.nunj" as render %}
+
+<div class="code-snippets" data-module="HCCodeSnippets">
+    <nav class="code-snippets__nav" id="code-snippets__nav">
+        <ul>
+            <li class="code-snippets__nav-item">
+                <a href="#code-snippet-html" class="code-snippets__nav-link" title="HTML">HTML</a>
+            </li>
+
+            {% set compHandle = entity.component().handle %}
+            {% for collection in entity.resources().items() %}
+                {% if collection.size %}
+                    {% for resource in collection.items() %}
+                        {% if not '.variables' in resource.base  %}
+                            {% if '.php' in resource.base  %}
+                                <li class="code-snippets__nav-item">
+                                    <a href="#code-snippet-php" class="code-snippets__nav-link" title="PHP">PHP</a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            {% set compHandle = entity.component().handle %}
+            {% for collection in entity.resources().items() %}
+                {% if collection.size %}
+                    {% for resource in collection.items() %}
+                        {% if '.variables.php' in resource.base  %}
+                            <li class="code-snippets__nav-item">
+                                <a href="#code-snippet-php-variables" class="code-snippets__nav-link" title="WordPress ACF Varibles">WordPress ACF Varibles</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            {% set compHandle = entity.component().handle %}
+            {% for collection in entity.resources().items() %}
+                {% if collection.size %}
+                    {% for resource in collection.items() %}
+                        {% if not '.spec' in resource.base  %}
+                            {% if '.js' in resource.base  %}
+                                <li class="code-snippets__nav-item">
+                                    <a href="#code-snippet-js" class="code-snippets__nav-link" title="JS">JS</a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            {% set compHandle = entity.component().handle %}
+            {% for collection in entity.resources().items() %}
+                {% if collection.size %}
+                    {% for resource in collection.items() %}
+                        {% if not '.css.map' in resource.base  %}
+                            {% if '.css' in resource.base  %}
+                                <li class="code-snippets__nav-item">
+                                    <a href="#code-snippet-css" class="code-snippets__nav-link" title="CSS">CSS</a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        {% include "./codepenButton.nunj" %}
+    </nav>
+
+
+    <div class="code-snippets__code-snippet" id="code-snippet-html">
+        <code class="Code Code--lang-html">
+        {% if not entity.isCollated or entity.isVariant or entity.variants().size == 1 %}
+        <pre>{{ render.entity(entity.render(null, renderEnv, {preview: false, collate: false}) | async(true)) | trim }}</pre>
+        {% else %}
+        {% for variant in entity.variants().items() %}
+        <pre>
+        {{ '<span class="hljs-comment">&lt;!-- ' + variant.label + ' --&gt;</span>' }}
+        {{ render.entity(variant.render(null, renderEnv, {preview: false, collate: false}) | async(true)) | trim }}
+        </pre>
+        {% endfor %}
+        {% endif %}
+        </code>
+    </div>
+
+    {% set compHandle = entity.component().handle %}
+    {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+            {% for resource in collection.items() %}
+                {% if not '.variables' in resource.base  %}
+                    {% if '.php' in resource.base  %}
+                        <div class="code-snippets__code-snippet" id="code-snippet-php">
+                            <code class="Code Code--lang-html FileBrowser-code">
+                                <pre>{{ resource.contents | highlight('html') }}</pre>
+                            </code>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% set compHandle = entity.component().handle %}
+    {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+            {% for resource in collection.items() %}
+                {% if '.variables.php' in resource.base  %}
+                    <div class="code-snippets__code-snippet" id="code-snippet-php-variables">
+                        <code class="Code Code--lang-{{ resource.lang }} FileBrowser-code">
+                            <pre>{{ resource.contents | highlight(resource.lang) }}</pre>
+                        </code>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% set compHandle = entity.component().handle %}
+    {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+            {% for resource in collection.items() %}
+                {% if not '.spec' in resource.base  %}
+                    {% if '.js' in resource.base  %}
+                        <div class="code-snippets__code-snippet" id="code-snippet-js">
+                            <code class="Code Code--lang-{{ resource.lang }} FileBrowser-code">
+                                <pre>{{ resource.contents | highlight(resource.lang) }}</pre>
+                            </code>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% set compHandle = entity.component().handle %}
+    {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+            {% for resource in collection.items() %}
+                {% if not resource.name + '.css.map' in resource.base  %}
+                    {% if resource.name + '.css' in resource.base  %}
+                        <div class="code-snippets__code-snippet" id="code-snippet-css">
+                            <code class="Code Code--lang-{{ resource.lang }} FileBrowser-code">
+                                <pre>{{ resource.contents | highlight(resource.lang) }}</pre>
+                            </code>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</div>

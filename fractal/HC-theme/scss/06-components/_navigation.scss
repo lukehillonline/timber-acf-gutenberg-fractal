@@ -1,0 +1,142 @@
+.Navigation {
+    height: 100%;
+    overflow-y: scroll;
+    padding: rem(16) 0;
+    position: relative;
+    width: rem(240);
+
+    &-logo {
+        display: block;
+        height: rem(20);
+        margin: rem(40) auto rem(40);
+        width: rem(140);
+
+        &-link {
+            border: 0;
+            display: block;
+            margin: 0 auto;
+
+            &:hover {
+                border: 0;
+            }
+        }
+
+        &:hover {
+            border: 0;
+        }
+    }
+
+    &-group {
+        max-width: rem(300);
+    }
+}
+
+.Tree {
+    &-collection {
+        & > h4 {
+            span {
+                position: static;
+
+                &::after {
+                    background-image: url('/images/theme/chevron-small.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: rem(18);
+                    content: '';
+                    height: rem(24);
+                    position: absolute;
+                    right: rem(7);
+                    top: rem(6);
+                    transform: rotate(180deg);
+                    transform-origin: center;
+                    transition: transform 0.3s ease;
+                    width: rem(24);
+                }
+            }
+        }
+
+        &.is-closed {
+            & > h4 {
+                span {
+                    &::after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &-title {
+        display: none;
+    }
+
+    &-collectionLabel,
+    &-entityLink {
+        border: 0;
+        color: $color-tertiary;
+        font-family: $heading-font;
+        font-size: rem(14);
+        font-weight: 600;
+        line-height: rem(24);
+        margin: 0;
+        margin-inline-start: 0;
+        padding-inline-start: 0;
+        padding-left: 0;
+        position: relative;
+        transition: all 0.3s ease-out;
+        white-space: normal;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+            border: 0;
+            color: $color-tertiary;
+        }
+
+        &:visited {
+            border: 0;
+            color: $color-tertiary;
+        }
+
+        span {
+            margin: 0;
+            margin-inline-start: 0;
+            padding-inline-start: 0;
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .Tree-depth-1 & {
+            padding-left: 0;
+        }
+
+        .Tree-depth-2 & {
+            padding-left: 1rem;
+        }
+
+        .Tree-depth-3 & {
+            font-weight: 400;
+            padding-left: 2rem;
+        }
+
+        .Tree-depth-4 & {
+            font-weight: 400;
+            padding-left: 3rem;
+        }
+    }
+
+    .is-current {
+        .Tree-entityLink {
+            background-color: transparent;
+            font-weight: 600;
+        }
+    }
+
+    &-entityLink {
+        font-weight: 400;
+    }
+}

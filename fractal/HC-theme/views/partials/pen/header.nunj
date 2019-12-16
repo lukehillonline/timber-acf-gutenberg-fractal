@@ -1,0 +1,14 @@
+<div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        {{ entity.title }}
+    </h1>
+</div>
+
+
+<div class="Pen-panel Pen-description">
+    {% if entity.notes %}
+    {{ frctl.docs.renderString(entity.notes, renderEnv) | async }}
+    {% else %}
+    <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+    {% endif %}
+</div>

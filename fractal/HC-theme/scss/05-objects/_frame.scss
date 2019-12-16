@@ -1,0 +1,29 @@
+.Frame {
+    &-inner {
+        bottom: auto;
+        height: auto;
+        left: auto;
+        overflow: auto;
+        position: inherit;
+        right: auto;
+        top: auto;
+    }
+
+    &-panel--sidebar {
+        background-color: $color-primary;
+        border: 0;
+        min-width: rem(240) !important;
+        overflow: visible;
+        padding: 0;
+        position: relative;
+        width: rem(240) !important;
+    }
+
+    // Prevent the Navigation from ever being hidden on desktop.
+    @include breakpoint(medium) {
+        &-body {
+            margin-right: 0 !important;
+            transform: translate3d(0, 0, 0) !important;
+        }
+    }
+}

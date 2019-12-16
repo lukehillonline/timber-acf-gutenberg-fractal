@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="container">
+		<article class="post-type-{{ post.post_type }} grid" id="post-{{ post.ID }}">
+			<img src="{{ post.thumbnail.src|resize(1800, 600) }}">
+			<section class="article-content span8 offset2 box left">
+				<h1 class="article-h1" style="text-align: center;">{{ post.title }}</h1>
+				<div class="article-body">
+					{{post.content}}
+				</div>
+			</section>
+
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

@@ -1,0 +1,10 @@
+.responsive-background-image {
+    background-image: var(--mobile-image) !important;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    @include breakpoint(medium) {
+        background-image: var(--desktop-image) !important;
+    }
+}

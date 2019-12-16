@@ -1,0 +1,64 @@
+@import '../../../../assets/styles/00-foundation/settings';
+@import 'node_modules/foundation-sites/scss/util/util';
+@import '../../../../assets/styles/01-settings/_import';
+@import '../../../../assets/styles/02-tools/_import';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .elementreset;
+
+    color: inherit;
+    line-height: $line-height-heading;
+}
+
+h1 {
+    @extend %heading00;
+}
+
+h2 {
+    @extend %heading01;
+}
+
+h3 {
+    @extend %heading02;
+}
+
+h4 {
+    @extend %heading03;
+}
+
+h5 {
+    @extend %heading04;
+}
+
+h6 {
+    @extend %heading05;
+}
+
+.heading00 {
+    @extend %heading00;
+}
+
+.heading01 {
+    @extend %heading01;
+}
+
+.heading02 {
+    @extend %heading02;
+}
+
+.heading03 {
+    @extend %heading03;
+}
+
+.heading04 {
+    @extend %heading04;
+}
+
+.heading05 {
+    @extend %heading05;
+}

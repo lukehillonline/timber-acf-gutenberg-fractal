@@ -1,0 +1,9 @@
+.grid-container {
+    padding: 0 $grid-container-small-padding;
+    @include breakpoint(medium) {
+        padding: 0 $grid-container-medium-padding;
+    }
+    @include breakpoint(large) {
+        padding: 0 $grid-container-large-padding;
+    }
+}

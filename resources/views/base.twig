@@ -1,0 +1,67 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<div id="page-wrap-outer" class="page-wrap-outer">
+			<div id="page-wrap-inner" class="page-wrap-inner">
+
+				<header class="header" style="background-color: black; margin-bottom: 20px;">
+					<div class="container">
+						<div class="grid">
+							<div class="span12 box">
+								{% block header %}
+									<div class="wrapper">
+										<h1 class="hdr-logo" role="banner">
+											<a class="hdr-logo-link" href="{{site.url}}" rel="home">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340.98 192" width="145px" height="21px">
+													<path fill="#fff" d="M514,44.38H500v81.71c0,15.55-10.24,26.3-29.24,26.3-18.84,0-28.76-9.1-28.76-26.3V44.38H428v83.2c0,21.5,16.39,36.89,42.92,36.89,26.87,0,43.08-15.39,43.08-36.89V44.38Zm75.8-1H569v119h13v-104h.34l51.44,104H654v-118H641v102h-.33Zm121.2,119h14v-118H711Zm98.92,0h18.19L870,44.38H854.8l-35.4,105h-.33l-35.56-105h-15.2Zm103.08,0h65v-12H927v-43h46v-12H927v-39h50v-12H913Zm116,0h14v-53h18.94c18.28,0,21.4,4.46,25.69,18.66,2.3,8.09,6.58,24.93,9.22,34.34h15.31c-4-12.88-7.24-23.77-11-36.82-4.12-14.2-8.24-20-17.13-22.12v-.39c14.08-3.64,21.61-14,21.61-27.43,0-22-15.71-31.24-36.33-31.24H1029v118Zm14-106h23.7c12.33,0,24.68,3.32,24.68,20.09,0,14.61-9.88,20.91-25.66,20.91H1043v-41Zm177.85-9.47c-8.36-3.3-18.69-5-29-5-17.71,0-38,9.27-38,31.1,0,15.72,10,25.8,30,33.91,17.7,7.28,28,13.4,28,25.47,0,13.23-10.66,19.52-24.76,19.52a72.89,72.89,0,0,1-31.3-7.61l-3.61,12.4a88.93,88.93,0,0,0,34.59,7.28c19.34,0,39.34-9.26,39.34-32.58,0-18.36-11.48-27.29-33.61-35.89-18.19-7.12-24.42-12.9-24.42-23.49,0-13.73,12.46-18,23.6-18a69.17,69.17,0,0,1,25.74,5ZM1276,162.38h65v-12h-51v-43h46v-12h-46v-39h50v-12h-64v118ZM262.73,172c-32.88,2.36-40.21-13.87-46.67-32.75-4.68-13.67-10-30.89-12.37-39.18,15.11-23.32,32.62-51.32,58.7-92.72H213.6c-8.68,13.67-17.24,27.52-25.72,41.06a108.91,108.91,0,0,0-9.64-20.39C167,10.56,149.36-1.48,123,.15,88.25,2.29,62,19.05,40.76,40.37,21.31,59.92,2.33,88.47.18,120.82c-2.89,43.3,28.57,68.09,64.25,70.81,28.19,2.15,49.29-5.38,67.06-14.73,12.06-6.34,37.73-27.84,45.41-37.42,5.7,26.57,20.4,52,53.54,52,20.54,0,33.54-11.34,40.54-20.09ZM104.44,156.32c-7.61,5.54-17.37,11.43-27.62,13-25.48,4-36.71-15.91-34.94-42.49,1.39-20.75,9.58-40,19.16-56.65C70.87,53.12,82.34,38,95.42,28.85a42.83,42.83,0,0,1,21.42-7.93c23.42-1.89,32,23.58,38,44.92,2.78,10,4.66,20.2,5.56,25.56-6.68,9.85-27.4,44.13-55.95,64.92Z">
+													</path>
+												</svg>
+											</a>
+										</h1>
+										<nav id="nav-main" class="nav-main" role="navigation">
+											{% include "menu.twig" with {'items': menu.get_items} %}
+										</nav><!-- #nav -->
+									</div>
+								{% endblock %}
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<div class="area body" id="page-main-content" role="main">
+					{% if title %}<h1>{{title}}</h1>{% endif %}
+					<div class="wrapper {{sidebar_class}}">
+						{% block content %}
+							Sorry, no content
+						{% endblock %}
+					</div>
+					{% if sidebar %}
+						<aside class="layout-sidebar">
+							{{sidebar}}
+						</aside>
+					{% endif %}
+				</div>
+
+				{% block footer %}
+					<footer id="footer" style="background-color: black; padding: 40px 0; margin-top: 20px; color: white;">
+						<div class="container">
+							<div class="grid">
+								<div class="span12 box">
+									{% include 'footer.twig' %}
+								</div>
+							</div>
+						</div>
+					</footer>
+					{{ function('wp_footer') }}
+				{% endblock %}
+		
+			</div>
+		</div>
+	</body>
+</html>

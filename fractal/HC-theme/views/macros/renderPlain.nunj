@@ -1,0 +1,8 @@
+{% macro entity(rendered) %}
+{% if rendered | isError %}
+{% set renderError %}<!-- Error rendering component: {{ error.message }} -->{% endset %}
+{{ renderError }}
+{% else %}
+{{ rendered | beautify }}
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,17 @@
+
+/// Table Cell Markup for Block 
+/// Useful for when you need to vertically align the contents of a module 
+/// @group layout
+/// @param {height} height size
+
+@mixin table-cell($height, $valign: top) {
+    display: table;
+    height: $height;
+    width: 100%;
+
+    .cell {
+        display: table-cell;
+        position: relative;
+        vertical-align: $valign;
+    }
+}

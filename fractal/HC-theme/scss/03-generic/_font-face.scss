@@ -1,0 +1,42 @@
+/**
+ *  SST W01
+ */
+@font-face {
+    font-family: 'SST W01 Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/SSTW02Roman/SSTW02Roman.woff2') format('woff2'),
+        url('../fonts/SSTW02Roman/SSTW02Roman.woff') format('woff'),
+        url('../fonts/SSTW02Roman/SSTW02Roman.ttf') format('truetype'),
+        url('../fonts/SSTW02Roman/SSTW02Roman.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SST W01 Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/SSTW02Medium/SSTW02Medium.woff2') format('woff2'),
+        url('../fonts/SSTW02Medium/SSTW02Medium.woff') format('woff'),
+        url('../fonts/SSTW02Medium/SSTW02Medium.ttf') format('truetype'),
+        url('../fonts/SSTW02Medium/SSTW02Medium.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SST W01 Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/SSTW02Light/SSTW02Light.woff2') format('woff2'),
+        url('../fonts/SSTW02Light/SSTW02Light.woff') format('woff'),
+        url('../fonts/SSTW02Light/SSTW02Light.ttf') format('truetype'),
+        url('../fonts/SSTW02Light/SSTW02Light.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SST W01 Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/SSTW02Bold/SSTW02Bold.woff2') format('woff2'),
+        url('../fonts/SSTW02Bold/SSTW02Bold.woff') format('woff'),
+        url('../fonts/SSTW02Bold/SSTW02Bold.ttf') format('truetype'),
+        url('../fonts/SSTW02Bold/SSTW02Bold.eot?#iefix') format('embedded-opentype');
+}

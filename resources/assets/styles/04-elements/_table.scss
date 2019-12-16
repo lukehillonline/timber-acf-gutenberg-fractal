@@ -1,0 +1,10 @@
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    @extend .elementreset;
+}

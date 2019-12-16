@@ -1,0 +1,8 @@
+{# We do not want the top header to be shown for this theme #}
+{# <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        {% include 'icons/close-nav.svg' %}
+        {% include 'icons/open-nav.svg' %}
+    </button>
+    <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+</div> #}

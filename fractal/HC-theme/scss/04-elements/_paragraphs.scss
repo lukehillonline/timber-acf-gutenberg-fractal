@@ -1,0 +1,26 @@
+::selection {
+    background: $color-primary; // WebKit/Blink Browsers */
+    color: map-get($colors, 'white');
+}
+
+p {
+    @extend %p--body;
+
+    margin: 0;
+}
+
+.p--tint {
+    color: $color-secondary;
+}
+
+.p--lead {
+    @extend %p--lead;
+}
+
+.p--small {
+    @extend %p--small;
+}
+
+.p--x-small {
+    @extend %p--x-small;
+}

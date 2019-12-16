@@ -1,0 +1,3 @@
+{% for stylesheet in frctl.theme.get('styles') %}
+<link rel="stylesheet" href="{{ path(stylesheet) }}" type="text/css">
+{% endfor %}

@@ -1,0 +1,12 @@
+
+.button {
+    @extend %button;
+}
+
+.button-p1 {
+    @include button-p1($color-tertiary, $color-primary);
+}
+
+.button--margin-right {
+    margin-right: 30px;
+}

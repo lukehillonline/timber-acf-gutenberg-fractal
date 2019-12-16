@@ -1,0 +1,7 @@
+.legend {
+    display: block;
+    font-size: rem(20);
+    letter-spacing: -rem(0.2);
+
+    @include font-heading('book');
+}

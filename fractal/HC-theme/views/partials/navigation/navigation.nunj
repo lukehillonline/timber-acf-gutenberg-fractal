@@ -1,0 +1,12 @@
+<nav class="Navigation">
+
+    <a class="Navigation-logo-link" href="/" title="Home">
+        <img src="{{ path('/images/logo.svg') }}" class="Navigation-logo" alt="Alpha Universe" />
+    </a>
+
+{% for navPartial in frctl.theme.get('nav') %}
+    {% include 'partials/navigation/' + navPartial + '.nunj' %}
+{% endfor %}
+
+</nav>
+

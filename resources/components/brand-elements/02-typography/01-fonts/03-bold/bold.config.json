@@ -1,0 +1,11 @@
+{
+    "title": "SST W01 Bold",
+    "label": "SST W01 Bold",
+    "context": {
+        "fonts": [
+            {
+                "stack": "'SST W01 Bold', 'Helvetica Neue', Helvetica, sans-serif"
+            }
+        ]
+    }
+}

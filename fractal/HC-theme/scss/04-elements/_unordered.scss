@@ -1,0 +1,29 @@
+ul {
+    @extend .elementreset;
+}
+
+li {
+    @extend .elementreset;
+}
+
+.list-unordered,
+ul {
+    list-style: none;
+    margin: rem(0) rem(0) rem(36) rem(48);
+    padding-left: rem(28);
+
+    li {
+        line-height: rem(24);
+        margin-bottom: rem(6);
+        position: relative;
+
+        &::before {
+            color: $color-primary;
+            content: '\2022';
+            font-size: 1.1em;
+            left: -1.1em;
+            line-height: 1.05;
+            position: absolute;
+        }
+    }
+}

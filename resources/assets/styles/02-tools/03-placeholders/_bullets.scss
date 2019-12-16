@@ -1,0 +1,41 @@
+%bullet-list {
+    list-style: none;
+    margin-bottom: rem(20);
+    margin-top: rem(20);
+    padding-left: rem(16);
+
+    li {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+}
+
+%unordered-list {
+    padding-left: 0;
+
+    li {
+
+        &::before {
+            color: $color-link;
+            content: '• ';
+            counter-increment: item;
+            padding-left: 15px;
+            padding-right: 7px;
+        }
+    }
+}
+
+%ordered-list {
+    counter-reset: item;
+    padding-left: 0;
+
+    li {
+        &::before {
+            color: $color-link;
+            content: counter(item) '. ';
+            counter-increment: item;
+            padding-left: 15px;
+            padding-right: 7px;
+        }
+    }
+}

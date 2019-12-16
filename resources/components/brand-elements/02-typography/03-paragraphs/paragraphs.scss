@@ -1,0 +1,10 @@
+@import '../../../../assets/styles/00-foundation/settings';
+@import 'node_modules/foundation-sites/scss/util/util';
+@import '../../../../assets/styles/01-settings/_import';
+@import '../../../../assets/styles/02-tools/_import';
+
+p {
+    @extend %p--body;
+
+    margin: 0;
+}

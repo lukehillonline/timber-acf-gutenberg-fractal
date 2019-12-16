@@ -1,0 +1,38 @@
+
+::selection {
+    background: $color-primary; // WebKit/Blink Browsers */
+    color: map-get($colors, 'white');
+}
+
+p {
+    @extend .elementreset;
+    line-height: rem(24);
+    margin: 0 0 rem(12);
+}
+
+.p--intro {
+    font-size: rem(20);
+    line-height: rem(27);
+    margin: 0 0 rem(24);
+}
+
+.p--tint {
+    color: $color-secondary;
+}
+
+.p--s {
+    font-size: rem(14);
+    line-height: rem(24);
+    @include font-heading('regular');
+
+    @include breakpoint(medium) {
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+}
+
+.p--xs {
+    font-size: rem(12);
+    line-height: rem(20);
+    @include font-heading('regular');
+}
